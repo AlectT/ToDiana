@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@600&display=swap');
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Edu NSW ACT Cursive', cursive;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #1f212b;
+}
+
+.container-main {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+}
+
+.container-quest {
+	width: 90%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: azure;
+	flex-direction: column;
+	padding-bottom: 2rem;
+}
+
+.question {
+	font-size: 6rem;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 0;
+	border-right: 10px solid azure;
+	animation: blink 0.9s infinite;
+}
+
+.question.active {
+	width: 0;
+	animation: typewriter 6s steps(15) 2s forwards, blink 0.9s infinite;
+}
+
+@keyframes typewriter {
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes blink {
+	0%,
+	100% {
+		border-right-color: transparent;
+	}
+	50% {
+		border-right-color: azure;
+	}
+}
+
+.container-answers {
+	width: 90%;
+	height: 15%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	opacity: 0;
+}
+
+.answer {
+	min-width: 20rem;
+	padding: 0px 2rem;
+	height: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #ece9d5;
+	color: #161a33;
+	font-size: 2.4rem;
+	text-decoration: none;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	position: absolute;
+	z-index: 2;
+}
+
+.answer:first-child {
+	top: 60%;
+	left: 30%;
+	transform: translate(-30%, -60%);
+}
+.answer:last-child {
+	top: 60%;
+	left: 30%;
+	transform: translate(100%, -60%);
+}
+
+.container-answers.active {
+	animation: answerOpacity 0.5s forwards;
+}
+
+@keyframes answerOpacity {
+	to {
+		opacity: 1;
+	}
+}
