@@ -173,9 +173,10 @@ body {
 	}
 }
 
-
 @media (max-width: 1000px) {
-	
+	* {
+		border: 1px solid red;
+	}
 
 	html {
 		overflow: hidden;
@@ -274,4 +275,3 @@ body {
 		transform: scale(0.5);
 	}
 }
-
