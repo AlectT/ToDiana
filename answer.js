@@ -9,13 +9,18 @@ const frases = [
 	'Mejor mierdota',
 	'🖕🏼',
 	'Pues no pues',
+	'Matenme',
 ];
 
 answerNo.addEventListener('click', () => {
-	answerNo.style.top = `${Math.floor(Math.random() * 650)}px`;
-	answerNo.style.left = `${Math.floor(Math.random() * 850)}px`;
-
-	contador++;
+	console.log(screen.height, screen.width);
+	if (screen.width <= 600) {
+		answerNo.style.top = `${Math.floor(Math.random() * 300) + 20}px`;
+		answerNo.style.left = `${Math.floor(Math.random() * 350)}px`;
+	} else {
+		answerNo.style.top = `${Math.floor(Math.random() * 650)}px`;
+		answerNo.style.left = `${Math.floor(Math.random() * 850)}px`;
+	}
 
 	if (contador >= 5 && contador < 17) {
 		let randomFrase = frases[Math.floor(Math.random() * frases.length)];
@@ -36,4 +41,5 @@ answerNo.addEventListener('click', () => {
 	if (contador >= 20) {
 		answerNo.textContent = 'Ya no funciona';
 	}
+	contador++;
 });

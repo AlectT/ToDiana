@@ -88,60 +88,193 @@ body {
 	height: 20px;
 	background: #830000;
 	border-radius: 50%;
+	z-index: 3;
 }
 
 .picture:nth-child(5) {
-	top: 40px;
-	left: 100px;
+	top: 6%;
+	left: 7%;
 	transform: rotate(8deg);
 }
 
 .picture:nth-child(6) {
-	top: 45px;
-	right: 170px;
+	top: 6%;
+	right: 10%;
 	transform: rotate(20deg);
 }
 
 .picture:nth-child(7) {
-	bottom: 70px;
-	left: 160px;
+	bottom: 10%;
+	left: 7%;
 	transform: rotate(-8deg) scale(1.2);
 }
 
 .picture:nth-child(8) {
-	bottom: 50px;
-	right: 180px;
+	bottom: 9%;
+	right: 7%;
 	transform: rotate(-15deg) scale(1.1);
 }
 
 .picture:nth-child(9) {
-	top: 10px;
+	top: 1%;
 	left: 40%;
 	transform: rotate(-10deg) scale(0.85);
 }
 
 .picture:nth-child(10) {
-	bottom: 10px;
-	right: 40%;
-	transform: rotate(10deg) scale(0.75);
+	bottom: 1%;
+	right: 30%;
+	transform: rotate(-10deg) scale(0.8);
+}
+
+.picture:nth-child(11) {
+	bottom: 2%;
+	right: 50%;
+	transform: rotate(18deg) scale(0.75);
 }
 
 .moment {
 	background: #000;
-	width: 200px;
-	height: 200px;
+	width: 90%;
+	height: 80%;
 	object-fit: cover;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	color: #fff;
-	font-size: 3rem;
+	overflow: hidden;
 }
 
 .date {
-	font-size: 8px;
-	font-weight: 400;
 	font-family: 'Edu NSW ACT Cursive', cursive;
 	font-weight: 600;
 	font-style: normal;
+	background: transparent;
+	text-align: center;
+	width: 100%;
+	min-width: 180px;
+}
+
+@media (max-width: 1300px) {
+	.picture:nth-child(8) {
+		transform: rotate(-15deg) scale(1.05);
+	}
+
+	.picture:nth-child(7) {
+		transform: rotate(-8deg) scale(1.05);
+	}
+
+	.picture:nth-child(10) {
+		transform: rotate(-10deg) scale(0.75);
+	}
+
+	.picture:nth-child(11) {
+		transform: rotate(18deg) scale(0.7);
+	}
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1000px) {
+	* {
+		border: 1px solid red;
+	}
+
+	html {
+		overflow: hidden;
+	}
+
+	body {
+		margin-top: -7%;
+		min-width: 100vh;
+		max-width: 100vh;
+		min-height: 100vw;
+		transform: rotate(90deg);
+	}
+
+	.container {
+		min-width: 45rem;
+		height: 18rem;
+		transform: scale(0.8);
+	}
+
+	.picture {
+		width: 150px;
+		height: 160px;
+		gap: 5px;
+		justify-content: end;
+		align-items: center;
+	}
+
+	.moment {
+		width: 90%;
+		height: 80%;
+	}
+
+	.date {
+		transform: scale(0.8);
+	}
+
+	.picture:nth-child(5) {
+		top: 9%;
+	}
+
+	.picture:nth-child(6) {
+		top: 9%;
+	}
+
+	.picture:nth-child(7) {
+		bottom: 13%;
+	}
+
+	.picture:nth-child(8) {
+		bottom: 12%;
+	}
+
+	.picture:nth-child(9) {
+		top: 4%;
+	}
+
+	.picture:nth-child(10) {
+		bottom: 4%;
+		right: 30%;
+		transform: rotate(-10deg) scale(0.8);
+	}
+
+	.picture:nth-child(11) {
+		bottom: 6%;
+	}
+}
+
+@media (max-width: 600px) {
+	body {
+		min-width: 100vh;
+		max-width: 100vh;
+		min-height: 100vw;
+		transform: rotate(90deg);
+	}
+
+	.container {
+		min-width: 45rem;
+		height: 18rem;
+		transform: scale(0.8);
+	}
+
+	.picture {
+		width: 100px;
+		height: 110px;
+		gap: 0px;
+		justify-content: end;
+		align-items: center;
+	}
+
+	.moment {
+		width: 90%;
+		height: 80%;
+	}
+
+	.date {
+		transform: scale(0.5);
+	}
 }
