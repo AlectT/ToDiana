@@ -1,7 +1,7 @@
 const imagenes = [
-	{ ruta: 'imagenes/1.jpg', fecha: '15-06-2025' },
 	{ ruta: 'imagenes/2.jpg', fecha: '27-04-2025' },
 	{ ruta: 'imagenes/3.jpg', fecha: '31-05-2025' },
+	{ ruta: 'imagenes/1.jpg', fecha: '15-06-2025' },
 	{ ruta: 'imagenes/4.jpg', fecha: '10-08-2025' },
 	{ ruta: 'imagenes/5.jpg', fecha: '20-08-2025 / 09-08-2025' },
 	{ ruta: 'imagenes/6.jpg', fecha: '23-08-2025' },
